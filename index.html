@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jsBeowulf</title>
+		<script type="application/javascript" src="loadscript.js"></script>
+		<script type="application/javascript" src="client.js"></script>
+		<script type="application/javascript">
+			function sendData() {
+				socket.send(document.getElementById("tosend").value);
+			}
+		</script>
+	</head>
+	<body onload="firstRun();">
+		<div id="output"></div>
+		<input id="tosend" type="TEXT"/><button onclick="sendData();">
+	</body>
+</html>
