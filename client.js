@@ -18,9 +18,15 @@ function socketConnected() {
 	log.write("Connected!");
 }
 
+obj = null;
 function socketMessage(e) {
 	//e is an event
-	log.write(e.data);
+	if(obj==null) {
+		log.write(e.data);
+		eval(e.data);
+	}else{
+		obj.evaluate(e.data);
+	}
 }
 
 function socketError(e) {
